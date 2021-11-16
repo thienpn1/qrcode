@@ -1,5 +1,6 @@
 import datetime,sys,os.path,openpyxl,os,keyboard,time
 from termcolor import colored, cprint
+from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.common.keys import Keys
@@ -53,12 +54,13 @@ cls = lambda: os.system('cls')
 dem_clear=0
 word = input('Moi Ban Nhap C de thuc thi: ')
 while(word.lower() != 'q'):
-    dem_clear=dem_clear+1
+    
     if dem_clear==10:
         cls()
         dem_clear=0
     # 4. check va mo file excel luu tru
-    file_name = datetime.datetime.now().strftime('%d_%m_%Y')+'.xlsx'
+    file_name = datetime.now().strftime('%d_%m_%Y')+'.xlsx'
+    ngay_hien_tai=int(datetime.now().strftime('%j'))
     # print(file_name)
     PATH = './log/'+file_name
     if os.path.isfile(PATH):
@@ -68,6 +70,7 @@ while(word.lower() != 'q'):
             ws = wb.active
         except PermissionError :
             print('file log đang mở , vui lòng đóng file log để thực hiện tiếp')
+            dem_clear=dem_clear+1
             time.sleep(3)
             continue
     else:
@@ -101,6 +104,10 @@ while(word.lower() != 'q'):
                 DK=0
                 ds_CMND=str(sheet.cell(row=i, column=9).value).strip().lower()
                 if cmnd_log_in in ds_CMND:
+                    ttr_string=str(sheet.cell(row=i, column=21).value).strip()
+                    day_ttr_string=str(sheet.cell(row=i, column=22).value).strip()
+                    xet_nghiem_string=str(sheet.cell(row=i, column=23).value).strip()
+                    day_xet_nghiem_string=str(sheet.cell(row=i, column=24).value).strip()
                     DK=1
                     break
         
@@ -108,9 +115,27 @@ while(word.lower() != 'q'):
                 # text = colored('DA DANG KI TRONG DANH SACH', 'blue', attrs=['reverse', 'blink'])
                 cprint("DA DANG KI TRONG DANH SACH", 'blue', attrs=['bold'], file=sys.stderr)
                 register='ĐÃ ĐĂNG KÍ'
+                lech_ngay_ttr = ngay_hien_tai-int((datetime.strptime(ttr_string, "%d-%m-%Y")).strftime("%j"))
+                lech_ngay_vac_xin = ngay_hien_tai-int((datetime.strptime(xet_nghiem_string, "%d-%m-%Y")).strftime("%j"))
+                if (lech_ngay_ttr>int(day_ttr_string)):
+                    # print('ĐÃ QUÁ HẠN TỜ TRÌNH')
+                    cprint("ĐÃ QUÁ HẠN TỜ TRÌNH", 'red', attrs=['bold'], file=sys.stderr)
+                else :
+                    # print('CHƯA QUÁ HẠN TỜ TRÌNH')
+                    cprint("CHƯA QUÁ HẠN TỜ TRÌNH", 'green', attrs=['bold'], file=sys.stderr)
+                if (lech_ngay_vac_xin>int(day_xet_nghiem_string)):
+                    # print('ĐÃ QUÁ HẠN VACCIN')
+                    cprint("ĐÃ QUÁ HẠN XÉT NGHIỆM", 'RED', attrs=['bold'], file=sys.stderr)
+                    
+                else :
+                    # print('CHƯA QUÁ HẠN VACCIN')
+                    cprint("CHƯA QUÁ HẠN XÉT NGHIỆM", 'green', attrs=['bold'], file=sys.stderr)
+                # print(lech_ngay)
+
             else:
                 cprint("CHUA DANG KI TRONG DANH SACH", 'red', attrs=['bold'], file=sys.stderr)
                 register='CHƯA ĐĂNG KÍ'
+            dem_clear=dem_clear+1
         #sau khi checkin thi ghi du lieu vao log excel
         # last_time_checkin = ws.cell(row=ws.max_row , column=12).value
         # if td_s[12].text != last_time_checkin:

@@ -1,15 +1,20 @@
-import sys
+import datetime,sys,os.path,openpyxl,os,keyboard,time
 from termcolor import colored, cprint
+from datetime import datetime
 
-text = colored('Hello, World!', 'red', attrs=['reverse', 'blink'])
-print(text)
-cprint('Hello, World!', 'green', 'on_red')
+def openfile():
+    file_name = datetime.datetime.now().strftime('%d_%m_%Y')+'.xlsx'
+    print(file_name)
+    PATH = './log/'+file_name
+    if os.path.isfile(PATH):
+    # print('da ton tai')
+        wb = openpyxl.load_workbook(filename=PATH)
+        ws = wb.active
+    else:
+    # print('chau ton tai')
+        wb = openpyxl.Workbook()
+        ws = wb.active
+        ws.title = "NHAT KY NGAY"
+        ws.append(header[1:])
 
-print_red_on_cyan = lambda x: cprint(x, 'red', 'on_cyan')
-print_red_on_cyan('Hello, World!')
-print_red_on_cyan('Hello, Universe!')
-
-for i in range(10):
-    cprint(i, 'magenta', end=' ')
-
-cprint("Attention!", 'red', attrs=['bold'], file=sys.stderr)
+openfile()
