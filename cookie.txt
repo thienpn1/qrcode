@@ -1,0 +1,180 @@
+curl "https://eticket.danang.gov.vn/" ^
+  -H "Connection: keep-alive" ^
+  -H "Cache-Control: max-age=0" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "Upgrade-Insecure-Requests: 1" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" ^
+  -H "Sec-Fetch-Site: none" ^
+  -H "Sec-Fetch-Mode: navigate" ^
+  -H "Sec-Fetch-User: ?1" ^
+  -H "Sec-Fetch-Dest: document" ^
+  -H "Accept-Language: en-US,en;q=0.9,vi;q=0.8" ^
+  -H "Cookie: __zi=3000.SSZzejyD7DybY_UadmiTpYMQzl2TNmE0AuArh8zL799faAEyW0iKcIFOex6031BH9Tsb_8O25T4drw7_Dm.1; fpsend=150221" ^
+  -H "If-None-Match: W/^\^"84c-17cbbfab048^\^"" ^
+  -H "If-Modified-Since: Tue, 26 Oct 2021 09:42:21 GMT" ^
+  --compressed &
+curl "https://eticket.danang.gov.vn/static/css/main.35f5d6e1.chunk.css" ^
+  -H "Connection: keep-alive" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "Accept: text/css,*/*;q=0.1" ^
+  -H "Sec-Fetch-Site: same-origin" ^
+  -H "Sec-Fetch-Mode: no-cors" ^
+  -H "Sec-Fetch-Dest: style" ^
+  -H "Referer: https://eticket.danang.gov.vn/" ^
+  -H "Accept-Language: en-US,en;q=0.9,vi;q=0.8" ^
+  -H "Cookie: __zi=3000.SSZzejyD7DybY_UadmiTpYMQzl2TNmE0AuArh8zL799faAEyW0iKcIFOex6031BH9Tsb_8O25T4drw7_Dm.1; fpsend=150221" ^
+  -H "If-None-Match: W/^\^"162-17cbbfab048^\^"" ^
+  -H "If-Modified-Since: Tue, 26 Oct 2021 09:42:21 GMT" ^
+  --compressed &
+curl "https://eticket.danang.gov.vn/static/js/2.17964224.chunk.js" ^
+  -H "Connection: keep-alive" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "If-None-Match: W/^\^"2858f0-17cbbfab430^\^"" ^
+  -H "If-Modified-Since: Tue, 26 Oct 2021 09:42:22 GMT" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "Accept: */*" ^
+  -H "Sec-Fetch-Site: same-origin" ^
+  -H "Sec-Fetch-Mode: no-cors" ^
+  -H "Sec-Fetch-Dest: script" ^
+  -H "Referer: https://eticket.danang.gov.vn/" ^
+  -H "Accept-Language: en-US,en;q=0.9,vi;q=0.8" ^
+  -H "Cookie: __zi=3000.SSZzejyD7DybY_UadmiTpYMQzl2TNmE0AuArh8zL799faAEyW0iKcIFOex6031BH9Tsb_8O25T4drw7_Dm.1; fpsend=150221" ^
+  --compressed &
+curl "https://eticket.danang.gov.vn/static/js/main.8b39fa84.chunk.js" ^
+  -H "Connection: keep-alive" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "If-None-Match: W/^\^"1e197-17cbbfab048^\^"" ^
+  -H "If-Modified-Since: Tue, 26 Oct 2021 09:42:21 GMT" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "Accept: */*" ^
+  -H "Sec-Fetch-Site: same-origin" ^
+  -H "Sec-Fetch-Mode: no-cors" ^
+  -H "Sec-Fetch-Dest: script" ^
+  -H "Referer: https://eticket.danang.gov.vn/" ^
+  -H "Accept-Language: en-US,en;q=0.9,vi;q=0.8" ^
+  -H "Cookie: __zi=3000.SSZzejyD7DybY_UadmiTpYMQzl2TNmE0AuArh8zL799faAEyW0iKcIFOex6031BH9Tsb_8O25T4drw7_Dm.1; fpsend=150221" ^
+  --compressed &
+curl "https://eticket.danang.gov.vn/api/v1/histories?limit=25&page=1&sort=-checkin_time" ^
+  -H "Connection: keep-alive" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MTgzYjk0OTc4OTczZjAwNDAxMTc4ZDMiLCJyb2xlIjoib3duZXItcGxhY2UiLCJpYXQiOjE2MzY1MTc4ODMsImV4cCI6MTYzNjUxNzg4M30.4BMajK7kmRhKaC-01EDVdpYzokWHoSsEq-htM3Ec6Dk" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "Sec-Fetch-Site: same-origin" ^
+  -H "Sec-Fetch-Mode: cors" ^
+  -H "Sec-Fetch-Dest: empty" ^
+  -H "Referer: https://eticket.danang.gov.vn/" ^
+  -H "Accept-Language: en-US,en;q=0.9,vi;q=0.8" ^
+  -H "Cookie: __zi=3000.SSZzejyD7DybY_UadmiTpYMQzl2TNmE0AuArh8zL799faAEyW0iKcIFOex6031BH9Tsb_8O25T4drw7_Dm.1; fpsend=150221" ^
+  -H "If-None-Match: W/^\^"e153-OmOQVOamLxERCGMtu3Ie8VnaCqw^\^"" ^
+  --compressed &
+curl "https://eticket.danang.gov.vn/favicon.ico" ^
+  -H "Connection: keep-alive" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "Accept: image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8" ^
+  -H "Sec-Fetch-Site: same-origin" ^
+  -H "Sec-Fetch-Mode: no-cors" ^
+  -H "Sec-Fetch-Dest: image" ^
+  -H "Referer: https://eticket.danang.gov.vn/" ^
+  -H "Accept-Language: en-US,en;q=0.9,vi;q=0.8" ^
+  -H "Cookie: __zi=3000.SSZzejyD7DybY_UadmiTpYMQzl2TNmE0AuArh8zL799faAEyW0iKcIFOex6031BH9Tsb_8O25T4drw7_Dm.1; fpsend=150221" ^
+  -H "If-None-Match: W/^\^"f1e-17cbbf83f48^\^"" ^
+  -H "If-Modified-Since: Tue, 26 Oct 2021 09:39:41 GMT" ^
+  --compressed &
+curl "https://eticket.danang.gov.vn/api/v1/placeTypes?limit=1000&name=&page=1&sort=-_id" ^
+  -H "Connection: keep-alive" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MTgzYjk0OTc4OTczZjAwNDAxMTc4ZDMiLCJyb2xlIjoib3duZXItcGxhY2UiLCJpYXQiOjE2MzY1MTc4ODMsImV4cCI6MTYzNjUxNzg4M30.4BMajK7kmRhKaC-01EDVdpYzokWHoSsEq-htM3Ec6Dk" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "Sec-Fetch-Site: same-origin" ^
+  -H "Sec-Fetch-Mode: cors" ^
+  -H "Sec-Fetch-Dest: empty" ^
+  -H "Referer: https://eticket.danang.gov.vn/" ^
+  -H "Accept-Language: en-US,en;q=0.9,vi;q=0.8" ^
+  -H "Cookie: __zi=3000.SSZzejyD7DybY_UadmiTpYMQzl2TNmE0AuArh8zL799faAEyW0iKcIFOex6031BH9Tsb_8O25T4drw7_Dm.1; fpsend=150221" ^
+  -H "If-None-Match: W/^\^"67c-ayZDJuxUgAoZoNOBob9svb5ntLI^\^"" ^
+  --compressed &
+curl "https://eticket.danang.gov.vn/api/v1/adminDivisions?limit=25&page=1&parent=7237&sort=-_id" ^
+  -H "Connection: keep-alive" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MTgzYjk0OTc4OTczZjAwNDAxMTc4ZDMiLCJyb2xlIjoib3duZXItcGxhY2UiLCJpYXQiOjE2MzY1MTc4ODMsImV4cCI6MTYzNjUxNzg4M30.4BMajK7kmRhKaC-01EDVdpYzokWHoSsEq-htM3Ec6Dk" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "Sec-Fetch-Site: same-origin" ^
+  -H "Sec-Fetch-Mode: cors" ^
+  -H "Sec-Fetch-Dest: empty" ^
+  -H "Referer: https://eticket.danang.gov.vn/" ^
+  -H "Accept-Language: en-US,en;q=0.9,vi;q=0.8" ^
+  -H "Cookie: __zi=3000.SSZzejyD7DybY_UadmiTpYMQzl2TNmE0AuArh8zL799faAEyW0iKcIFOex6031BH9Tsb_8O25T4drw7_Dm.1; fpsend=150221" ^
+  -H "If-None-Match: W/^\^"295-p1Pzr0GE0CigD2ekPHH6o7FmMM0^\^"" ^
+  --compressed &
+curl "https://eticket.danang.gov.vn/manifest.json" ^
+  -H "Connection: keep-alive" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "Accept: */*" ^
+  -H "Sec-Fetch-Site: same-origin" ^
+  -H "Sec-Fetch-Mode: cors" ^
+  -H "Sec-Fetch-Dest: manifest" ^
+  -H "Referer: https://eticket.danang.gov.vn/" ^
+  -H "Accept-Language: en-US,en;q=0.9,vi;q=0.8" ^
+  -H "If-None-Match: W/^\^"132-17cbbf83f48^\^"" ^
+  -H "If-Modified-Since: Tue, 26 Oct 2021 09:39:41 GMT" ^
+  --compressed &
+curl "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "Referer: https://eticket.danang.gov.vn/" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  --compressed &
+curl "chrome-extension://amfojhdiedpdnlijjbhjnhokbnohfdfb/injected/nr-ext-dom/nr-ext-select-icon/nr-ext-select-icon.html" ^
+  -H "Referer: " ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  --compressed &
+curl "https://eticket.danang.gov.vn/api/v1/tourists?filter=^%^7B^%^22_id^%^22^%^3A^%^7B^%^22^%^24in^%^22^%^3A^%^5B^%^22618b377919e40355f81ee53d^%^22^%^2C^%^22618b348719e40355f81c6259^%^22^%^2C^%^22618b341c19e40355f81c1d54^%^22^%^2C^%^22618b24a719e40355f81216f1^%^22^%^2C^%^22618b1f1a19e40355f80e2b66^%^22^%^2C^%^22618b1ed019e40355f80e06bf^%^22^%^2C^%^226188715e19e40355f83e657f^%^22^%^2C^%^226189bcc919e40355f89dc197^%^22^%^2C^%^2261890ed719e40355f887647a^%^22^%^2C^%^22618a8d1719e40355f8eee97a^%^22^%^2C^%^226188c80519e40355f86a4c0d^%^22^%^2C^%^226188c89119e40355f86ac986^%^22^%^2C^%^22618b1d8f19e40355f80cdd38^%^22^%^2C^%^226189c72d19e40355f8a8576e^%^22^%^2C^%^226189dfd219e40355f8b9b92d^%^22^%^2C^%^22618b1d8819e40355f80cd8eb^%^22^%^2C^%^2261887db519e40355f84a9624^%^22^%^2C^%^2261887ea919e40355f84b30a7^%^22^%^2C^%^226189c1e719e40355f8a2ab0b^%^22^%^2C^%^226189fea819e40355f8c5984e^%^22^%^5D^%^7D^%^7D" ^
+  -H "Connection: keep-alive" ^
+  -H "sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"95^\^", ^\^"Chromium^\^";v=^\^"95^\^", ^\^";Not A Brand^\^";v=^\^"99^\^"" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MTgzYjk0OTc4OTczZjAwNDAxMTc4ZDMiLCJyb2xlIjoib3duZXItcGxhY2UiLCJpYXQiOjE2MzY1MTc4ODMsImV4cCI6MTYzNjUxNzg4M30.4BMajK7kmRhKaC-01EDVdpYzokWHoSsEq-htM3Ec6Dk" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "Sec-Fetch-Site: same-origin" ^
+  -H "Sec-Fetch-Mode: cors" ^
+  -H "Sec-Fetch-Dest: empty" ^
+  -H "Referer: https://eticket.danang.gov.vn/" ^
+  -H "Accept-Language: en-US,en;q=0.9,vi;q=0.8" ^
+  -H "Cookie: __zi=3000.SSZzejyD7DybY_UadmiTpYMQzl2TNmE0AuArh8zL799faAEyW0iKcIFOex6031BH9Tsb_8O25T4drw7_Dm.1; fpsend=150221" ^
+  -H "If-None-Match: W/^\^"9e4f-RlP0jM6YQdXkWMzqK8OOPAaR3Eg^\^"" ^
+  --compressed &
+curl "chrome-extension://amfojhdiedpdnlijjbhjnhokbnohfdfb/injected/nr-ext-dom/nr-ext-select-icon/nr-ext-select-icon.css" ^
+  -H "Referer: " ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  --compressed &
+curl "chrome-extension://amfojhdiedpdnlijjbhjnhokbnohfdfb/img/logo/icon^@2x.png" ^
+  -H "Referer: " ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" ^
+  --compressed

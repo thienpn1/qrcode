@@ -1,0 +1,1 @@
+wt cmd /k "python ./auto_complete.py"

@@ -1,0 +1,21 @@
+1636700194486	geckodriver	INFO	Listening on 127.0.0.1:62614
+1636700412964	geckodriver	INFO	Listening on 127.0.0.1:62664
+1636700547089	geckodriver	INFO	Listening on 127.0.0.1:62692
+1636700596170	geckodriver	INFO	Listening on 127.0.0.1:62702
+1636700616176	geckodriver	INFO	Listening on 127.0.0.1:62714
+1636700619261	mozrunner::runner	INFO	Running command: "D:\\Soft\\FirefoxPortable\\App\\firefox64\\firefox.exe" "--marionette" "--remote-debugging-port" "62715" "-no-remote" "-profile" "C:\\Users\\thien\\AppData\\Local\\Temp\\rust_mozprofilezdmy1o"
+1636700619861	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\thien\\AppData\\Local\\Temp\\rust_mozprofilezdmy1o\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62715/devtools/browser/0535c3e3-0ca5-484a-ab27-515404d8179a
+1636700623326	Marionette	INFO	Listening on port 62721
+1636700623510	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1636700627631	Marionette	INFO	Stopped listening on port 62721
+1636702243284	geckodriver	INFO	Listening on 127.0.0.1:50454
+1636702246349	mozrunner::runner	INFO	Running command: "D:\\Soft\\FirefoxPortable\\App\\firefox64\\firefox.exe" "--marionette" "--remote-debugging-port" "50455" "-no-remote" "-profile" "C:\\Users\\thien\\AppData\\Local\\Temp\\rust_mozprofileh10Swa"
+1636702246900	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\thien\\AppData\\Local\\Temp\\rust_mozprofileh10Swa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50455/devtools/browser/627107b8-798b-44d3-b224-bfa74d52050e
+1636702249655	Marionette	INFO	Listening on port 50460
+1636702250066	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1636702253675	Marionette	INFO	Stopped listening on port 50460
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\thien\AppData\Local\Temp\rust_mozprofileh10Swa\protections.sqlite
