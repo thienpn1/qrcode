@@ -1,13 +1,7 @@
-import datetime
-import sys
-import os.path
-import openpyxl
-import os
-import keyboard
+import datetime,sys,os.path,openpyxl,os,keyboard,time
 from termcolor import colored, cprint
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service as EdgeService
-import time
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 # 1. khai bao va khoi chay  web driver
@@ -55,8 +49,14 @@ header.append('ĐĂNG KÍ?')
 
 # print(last_time_checkin)
 ## 5. doc du lieu va dua vao excel
+cls = lambda: os.system('cls')
+dem_clear=0
 word = input('Moi Ban Nhap C de thuc thi: ')
 while(word.lower() != 'q'):
+    dem_clear=dem_clear+1
+    if dem_clear==10:
+        cls()
+        dem_clear=0
     # 4. check va mo file excel luu tru
     file_name = datetime.datetime.now().strftime('%d_%m_%Y')+'.xlsx'
     # print(file_name)
