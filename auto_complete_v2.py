@@ -74,10 +74,10 @@ while(word.lower() != 'q'):
         HoTen = td_s[2].text
         DK = 0
         if td_s[12].text != last_time_checkin:# check xem thời gian nhân sự cúi cùng checkin trên eticket có trùng với nhân sự cúi cùng trong file log kh? nếu trùng thì bỏ qua kh phải xuất lại 
+            print('##################################################')
             print('ĐANG THỰC HIỆN QUÉT DỮ LIỆU TRÊN HỆ THỐNG ETICKET.DANANG.GOV.VN')
             print('HỌ VÀ TÊN NHÂN SỰ CHECKIN : ')
             cprint(HoTen, 'cyan',attrs=['bold'], file=sys.stderr)
-            print('######################################')
             print('CMND/CCCD ĐANG THUC HIEN CHECK IN TAI CONG:')
             cprint(cmnd_log_in, 'cyan',attrs=['bold'], file=sys.stderr)
             # mở file dữ liệu và tra cứu cmnd nhân sự đang checkin + tra cứu thời hạn của tờ trình (ttr) và xét nghiệm
