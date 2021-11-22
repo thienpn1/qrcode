@@ -75,9 +75,15 @@ def check_save_filelog(wb, file_name):
 
 
 def compare_ngay(ngay_het_han, ngay_hien_tai):
-    ngay_het_han = int((datetime.strptime(ngay_het_han, "%d-%m-%Y")).strftime("%j"))
-    ngay_hien_tai = int((datetime.strptime(ngay_hien_tai, "%d-%m-%Y")).strftime("%j"))
-    if ngay_hien_tai > ngay_het_han:
-        return 0  # 'HẾT HẠN'
+    year_het_han=datetime.strptime(ngay_het_han, "%d-%m-%Y").strftime("%Y")
+    year_hien_tai=datetime.strptime(ngay_hien_tai, "%d-%m-%Y").strftime("%Y")
+    if year_het_han >= year_hien_tai:
+        ngay_het_han = int((datetime.strptime(ngay_het_han, "%d-%m-%Y")).strftime("%j"))+365*(int(year_het_han)-int(year_hien_tai))
+        ngay_hien_tai = int((datetime.strptime(ngay_hien_tai, "%d-%m-%Y")).strftime("%j"))
+        thoi_han=ngay_het_han-ngay_hien_tai
     else:
-        return 1  # 'CÒN HẠN'
+        thoi_han=0
+    if thoi_han>0 :
+        return 1 # con han
+    else:
+        return 0  # 'het HẠN'

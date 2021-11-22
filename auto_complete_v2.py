@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 # 1. khai bao va khoi chay  web driver
 options = webdriver.EdgeOptions()
 options.page_load_strategy = 'normal'
-# options.add_argument("--headless")
+options.add_argument("--headless")
 service = EdgeService(executable_path='.\msedgedriver.exe')
 # 2. thuc hien dang nhap  va dieu huong vao trang can lay du lieu
 Usr = "kv2zoom@gmail.com"
@@ -74,11 +74,14 @@ while(word.lower() != 'q'):
         HoTen = td_s[2].text
         DK = 0
         if td_s[12].text != last_time_checkin:# check xem thời gian nhân sự cúi cùng checkin trên eticket có trùng với nhân sự cúi cùng trong file log kh? nếu trùng thì bỏ qua kh phải xuất lại 
-            print('##################################################')
+            
             print('ĐANG THỰC HIỆN QUÉT DỮ LIỆU TRÊN HỆ THỐNG ETICKET.DANANG.GOV.VN')
-            print('HỌ VÀ TÊN NHÂN SỰ CHECKIN : ')
+            print('##################################################')
+            # print('HỌ VÀ TÊN NHÂN SỰ CHECKIN : ',end=' ')
+            cprint('HỌ VÀ TÊN NHÂN SỰ CHECKIN :', 'white',attrs=['bold'], file=sys.stderr,end=' ')
             cprint(HoTen, 'cyan',attrs=['bold'], file=sys.stderr)
-            print('CMND/CCCD ĐANG THUC HIEN CHECK IN TAI CONG:')
+            # print('CMND/CCCD ĐANG THUC HIEN CHECK IN TAI CONG:',end=' ')
+            cprint('CMND/CCCD ĐANG THUC HIEN CHECK IN TAI CONG:', 'white',attrs=['bold'], file=sys.stderr,end=' ')
             cprint(cmnd_log_in, 'cyan',attrs=['bold'], file=sys.stderr)
             # mở file dữ liệu và tra cứu cmnd nhân sự đang checkin + tra cứu thời hạn của tờ trình (ttr) và xét nghiệm
             
