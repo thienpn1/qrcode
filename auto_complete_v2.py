@@ -2,6 +2,8 @@ import datetime,sys,os.path,openpyxl,os,keyboard,time,thu_vien
 from termcolor import colored, cprint
 from datetime import datetime
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -9,17 +11,21 @@ from selenium.webdriver.common.by import By
 options = webdriver.EdgeOptions()
 options.page_load_strategy = 'normal'
 options.add_argument("--headless")
+
 service = EdgeService(executable_path='.\msedgedriver.exe')
 # 2. thuc hien dang nhap  va dieu huong vao trang can lay du lieu
 Usr = "kv2zoom@gmail.com"
 pas = "27bnguyenthanhhan"
 word = ''
 driver = webdriver.Edge(service=service, options=options)
+wait= WebDriverWait(driver,20)
 driver.get("https://eticket.danang.gov.vn/#/login")
 driver.find_element(By.ID, 'username').send_keys(Usr)
 driver.find_element(By.ID, 'password').send_keys(pas)
 driver.find_element(By.XPATH, "/html/body/div/div/div/form/div[2]/button").click()
-driver.implicitly_wait(1)
+# driver.implicitly_wait(1)
+# doan nay dung de chờ cho load xong phần tử cần click
+wait.until(expected_conditions.visibility_of_element_located((By.PARTIAL_LINK_TEXT, 'check-ins'))) # ham visibility_of_element_located chi nhan 1 tham so 
 driver.find_element(By.PARTIAL_LINK_TEXT, 'check-ins').click()
 # 3. lay ten cot ( header th) va luu vao mang
 header = []
@@ -37,11 +43,13 @@ while(word.lower() != 'q'):
     # 4. check va mo file excel luu tru
     file_name = datetime.now().strftime('%d_%m_%Y')+'.xlsx'
     PATH = './log/'+file_name
+    max_row_log=0
     if os.path.isfile(PATH):
         # print('da ton tai')
         try:
             wb = openpyxl.load_workbook(filename=PATH)
             ws = wb.active
+            max_row_log=ws.max_row
         except PermissionError :
             print('file log đang mở , vui lòng đóng file log để thực hiện tiếp')
             dem_clear=dem_clear+1
@@ -54,6 +62,7 @@ while(word.lower() != 'q'):
         ws = wb.active
         ws.title = "NHAT KY NGAY"
         ws.append(header[1:])
+    
     # file_name = datetime.now().strftime('%d_%m_%Y')+'.xlsx'
     ngay_hien_tai = datetime.now().strftime('%d-%m-%Y')
 
@@ -65,9 +74,11 @@ while(word.lower() != 'q'):
         dem_clear+=1
         continue
     if word.lower() == 'c':
-        last_time_checkin = ws.cell(row=ws.max_row, column=12).value # ;ấy thời điểm cúi cùng của nhân sự checkin trong file log
+        last_time_checkin = ws.cell(row=ws.max_row, column=12).value # lấy thời điểm cúi cùng của nhân sự checkin trong file log
         driver.refresh()
-        time.sleep(1)
+        # time.sleep(1)
+        # doan nay dung de chờ cho load xong phần tử cần chọn ( tức hàng đầu tiên)
+        wait.until(expected_conditions.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div/main/div[2]/div/div[2]/div/table/tbody/tr[1]')))
         row_data = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/main/div[2]/div/div[2]/div/table/tbody/tr[1]')
         td_s = row_data.find_elements(By.TAG_NAME, 'td')
         cmnd_log_in = td_s[5].text # lấy cmnd cua nhân sự đang checkin 
@@ -85,7 +96,7 @@ while(word.lower() != 'q'):
             cprint(cmnd_log_in, 'cyan',attrs=['bold'], file=sys.stderr)
             # mở file dữ liệu và tra cứu cmnd nhân sự đang checkin + tra cứu thời hạn của tờ trình (ttr) và xét nghiệm
             
-            for i in range(2, max_row):
+            for i in range(2, max_row):# lay cmnd va quet lai trong file du lieu => check xem da dk hay chua
                 DK = 0
                 ds_CMND = str(sheet.cell(row=i, column=9).value).strip().lower()
                 if cmnd_log_in in ds_CMND:# nếu tìm thấy số cmnd trong danh sách thì lấy dữ liệu trong row đó
@@ -112,6 +123,15 @@ while(word.lower() != 'q'):
             if DK==0:
                 cprint("CHƯA ĐĂNG KÍ TRONG DANH SÁCH", 'red',attrs=['bold'], file=sys.stderr)
                 register = 'CHƯA ĐĂNG KÍ'
+            dem_log_in=1
+            for i in range(2, max_row_log):
+                
+                ds_CMND = str(ws.cell(row=i, column=5).value).strip().lower()
+                if cmnd_log_in in ds_CMND:
+                    dem_log_in+=1
+            cprint("ĐANG THỰC HIỆN CHECK IN LẦN THỨ : ", 'yellow',attrs=['bold'], file=sys.stderr,end=' ')
+            cprint(dem_log_in, 'cyan',attrs=['bold'], file=sys.stderr,end=' ')
+            cprint(" TRONG NGÀY ", 'yellow',attrs=['bold'], file=sys.stderr)
             dem_clear = dem_clear+1
             #GHI VÀO FILE LOG kết quả checkin mới nhất
             data_to_write = []#mảng chứa dữ liệu để ghi

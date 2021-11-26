@@ -49,7 +49,7 @@ def check_open_filelog(PATH):
         except PermissionError:
             print('file log đang mở , vui lòng đóng file log để thực hiện tiếp')
             # dem_clear=dem_clear+1
-            # time.sleep(3)
+            time.sleep(3)
             # continue
             return 0
     else:
